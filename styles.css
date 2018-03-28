@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  font: 16px/2 Ubuntu, sans-serif;
+  font-weight: 300;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+body {
+  background: #253031;
+  color: #E5F4E3;
+  padding-bottom: 3em;
+}
+
+.votes-list {
+  width: 80%;
+  max-width: 40em;
+  margin: 0.5em;
+  list-style: none;
+  border-left: 2px solid #E5F4E3;
+}
+
+@media screen and (min-width: 45em) {
+  .votes-list {
+    margin: 0.5em auto;
+  }
+}
+
+.votes-list li {
+  clear: both;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.votes-list div {
+  height: 2.5em;
+  line-height: 2.5em;
+  margin: 0.25em 0;
+  padding: 0 0.5em;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 1.6em;
+}
+
+.votes-list div:first-child {
+  color: #253031;
+  transition: background 0.25s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.votes-list div:first-child:hover {
+  box-shadow: 0 0 0.5em 0 rgba(229, 244, 227, 0.45);
+  cursor: pointer;
+}
+
+.votes-list li div:first-child:hover + div:last-child {
+  transition: color 0.25s ease-in-out;
+}
+
+.votes-list li:nth-child(4n+1) div:first-child {
+  background: #BBD800;
+}
+
+.votes-list li:nth-child(4n+1) div:first-child:hover {
+  background: #CCEC00;
+}
+
+.votes-list li:nth-child(4n+1) div:first-child:hover + div:last-child {
+  color: #BBD800;
+}
+
+.votes-list li:nth-child(4n+2) div:first-child {
+  background: #00CC7D;
+}
+
+.votes-list li:nth-child(4n+2) div:first-child:hover {
+  background: #00ED92;
+}
+
+.votes-list li:nth-child(4n+2) div:first-child:hover + div:last-child {
+  color: #00CC7D;
+}
+
+.votes-list li:nth-child(4n+3) div:first-child {
+  background: #00E0BA;
+}
+
+.votes-list li:nth-child(4n+3) div:first-child:hover {
+  background: #00FFD4;
+}
+
+.votes-list li:nth-child(4n+3) div:first-child:hover + div:last-child {
+  color: #00E0BA;
+}
+
+.votes-list li:nth-child(4n+4) div:first-child {
+  background: #35E8F2;
+}
+
+.votes-list li:nth-child(4n+4) div:first-child:hover {
+  background: #05FDFF;
+}
+
+.votes-list li:nth-child(4n+4) div:first-child:hover + div:last-child {
+  color: #35E8F2;
+}
+
+#newIdea {
+  text-align: center;
+  height: 3em;
+  line-height: 3em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(23, 30, 31, 0.9);
+}
+
+#newIdea input {
+  height: 2em;
+  margin: 0.5em 0 1em 0.5em;
+  border-radius: 1.25em;
+  border: none;
+  padding: 1em;
+  vertical-align: middle;
+  font-size: 1em;
+  font: 16px/0.1 Ubuntu, sans-serif;
+  outline: none;
+  transition: background 0.25s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+#newIdea input:focus {
+  box-shadow: 0 0 0.5em 0 rgba(229, 244, 227, 0.75);
+}
+
+#newIdea input[type="text"] {
+  width: 9em;
+  font-weight: 300;
+  background: #E5F4E3;
+  color: #253031;
+}
+
+#newIdea input[type="text"]:hover, #newIdea input[type="text"]:focus {
+  background: white;
+}
+
+#newIdea input[type="button"] {
+  width: 2em;
+  padding: 0.95em 1em 1em 0.75em;
+  background: #BBD800;
+  font-weight: 700;
+}
+
+#newIdea input[type="button"]:hover {
+  box-shadow: 0 0 0.5em 0 rgba(229, 244, 227, 0.45);
+  cursor: pointer;
+  background: #CCEC00;
+}
+
+.info {
+  text-align: center;
+}
+
+.error {
+  animation: blink 0.2s 0s infinite !important;
+}
+@keyframes blink{
+    0%{background: red !important}
+    100%{background: inherit}
+}
